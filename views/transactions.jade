@@ -19,11 +19,11 @@ html(lang='en')
         ul.navbar-nav.mr-auto.mt-2.mt-lg-0
           li.nav-item
             a.nav-link(href='/') Home
-          li.nav-item.active
+          li.nav-item
             a.nav-link(href='/customers')
               | Customers
               span.sr-only (current)
-          li.nav-item
+          li.nav-item.active
             a.nav-link(href='/transactions') Transactions
         a(href='/')
             button.btn.btn-success.mr-5(type='submit') Back to Home
@@ -36,12 +36,23 @@ html(lang='en')
               th(scope='col') Receiver
               th(scope='col') Amount ( in Rs )
           tbody
+            if transactions
+            -var index = 1
             each transaction in transactions
                 tr
-                th(scope='row') 
+                th(scope='row')=index++
                 td=transaction.Sender
                 td=transaction.Receiver
                 td=transaction.Amount
+            else
+                td No Transaction
+                td 
+                td 
+                td
         
-
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
 

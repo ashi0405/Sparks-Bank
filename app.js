@@ -103,25 +103,13 @@ app.post("/viewcustomer/:id", async (req, res, next) => {
         { Name: sender },
         { $inc: { Balance: -amount } },
         { new: true }
-      )
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      );
 
       await Customers.findOneAndUpdate(
         { Name: receiver },
         { $inc: { Balance: amount } },
         { new: true }
-      )
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      );
       req.body.success = "Transfer Successful";
       return customerResponse(req, res);
     }

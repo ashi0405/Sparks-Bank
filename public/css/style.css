@@ -9,13 +9,17 @@ body {
 .error-field,
 .success-field {
   position: fixed;
-  left: 50%;
-  top: 10%;
-  background-color: red;
-  color: #fff;
-  transform: translateX(-50%);
+  right: 2%;
+  top: 2%;
+  border: 0.1rem solid red;
+  box-shadow: 0 0 5px 0 red;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  color: red;
   animation: opac-low 3s forwards;
   opacity: 1;
+  z-index: 999;
+  background-color: #0000;
 }
 @keyframes opac-low {
   75% {
@@ -26,7 +30,9 @@ body {
   }
 }
 .success-field {
-  background-color: green;
+  box-shadow: 0 0 5px 0 green;
+  border-color: green;
+  color: green;
 }
 table {
   margin-top: 70px;
