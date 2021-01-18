@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // Bootstrap CSS
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Ubuntu&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='/css/style.css')
+    title Homepage
+  body
+    // <h1>Hello, world!</h1>
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarTogglerDemo01' aria-controls='navbarTogglerDemo01' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarTogglerDemo01.collapse.navbar-collapse
+        a.navbar-brand(href='/') The Sparks Bank
+        ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+          li.nav-item.active
+            a.nav-link(href='/')
+              | Home 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/customers') Customers
+          li.nav-item
+            a.nav-link(href='/transactions') Transactions
+    .row(style='background-color: lightcyan; margin-top: 70px')
+      .d-flex.col-6
+        img(src='/images/bank-getty.jpg' alt='Bank Picture' style='width: 100%; height: 100%')
+      .d-flex.justify-content-center.align-items-center.flex-column.col-6
+        h2.mt-4.mb-4 Welcome to Sparks Bank
+        a(href='/customers')
+          button.btn.btn-success.mb-4(type='button')
+            | View Customers
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')

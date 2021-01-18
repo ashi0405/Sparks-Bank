@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.error-field,
+.success-field {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  background-color: red;
+  color: #fff;
+  transform: translateX(-50%);
+  animation: opac-low 3s forwards;
+  opacity: 1;
+}
+@keyframes opac-low {
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.success-field {
+  background-color: green;
+}
+table {
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-top: 70px;
+}
+ul.success li {
+  padding: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  list-style: none;
+}
+
+ul.info li {
+  list-style: none;
+  padding: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 1px solid rgb(0, 110, 255);
+  border-radius: 4px;
+  color: rgb(0, 110, 255);
+}
+
+ul.error li {
+  padding: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  list-style: none;
+}
